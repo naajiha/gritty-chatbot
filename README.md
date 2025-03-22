@@ -4,6 +4,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 INSTALLS:
 npm install react-icons
+npm install openai
 
 First, run the development server:
 

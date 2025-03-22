@@ -4,10 +4,7 @@ import { TbMessageChatbot } from "react-icons/tb";
 import BotMessage from "./ui/bot-message";
 import UserMessage from "./ui/user-message";
 import ChatInput from "./ui/chat-input";
-//import { chatCompletion } from "@/actions";
-import { chatCompletion } from "@/actions/chatCompletion";
-
-
+import { chatCompletion } from "@/actions";
 
 export type Message = {
   content: string;
@@ -15,7 +12,7 @@ export type Message = {
 };
 
 export default function Chatbot() {
-  const [showChat, setShowChat] = useState(false);
+  const [showChat, setShowChat] = useState(true);
   const [userMessage, setUserMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
@@ -53,7 +50,7 @@ export default function Chatbot() {
 
         const assistantMessage: Message = {
           content: res.choices[0].message.content as string,
-          role: "assistant",
+          role: "user",
         };
 
         setMessages(prevMessages => [...prevMessages, assistantMessage]);
@@ -106,5 +103,3 @@ export default function Chatbot() {
     </>
   );
 }
-
-
