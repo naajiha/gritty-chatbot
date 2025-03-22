@@ -67,7 +67,7 @@ export default function Chatbot() {
       <TbMessageChatbot
         size={64}
         onClick={() => setShowChat(!showChat)}
-        className="fixed right-12 bottom-[calc(1rem)] hover:cursor-pointer"
+        className="fixed right-12 bottom-[calc(1rem)] hover:cursor-pointer "
       />
 
       {showChat && (
